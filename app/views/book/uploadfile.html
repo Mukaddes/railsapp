@@ -1,5 +1,5 @@
 <h1>Book Donation</h1>
-<%= form_tag(controller: "book",{:action => 'uploadfile'}, :multipart => true) do %>
+<%= form_tag({:action => 'uploadfile'}, :multipart => true) do %>
 <p><label for="upload_file">Select File</label>
     <%= file_field 'upload', 'datafile' %></p>
 <%= submit_tag "Upload" %>
