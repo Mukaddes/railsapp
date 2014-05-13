@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'book/edit' => 'book#edit'
   get 'book/delete' => 'book#delete'
   post 'book/update' => 'book#update'
+  get 'book/uploadfile'=> 'book#index'
+  post 'book/uploadfile'=> 'book#uploadfile'
 end

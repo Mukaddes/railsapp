@@ -8,18 +8,21 @@
     <li><%= link_to c.name, :action => "show_subjects", :id => c.id %></li>
     <% end %>
 </ul>
+
 <ol id="books">
     <% @books.each do |c| %>
     <li>
         <%= link_to c.title, {:action => "show", :id => c.id} -%>
-        <b> <%= link_to 'Edit', {:action => "edit",
-            :id => c.id} %></b>
-        <b> <%= link_to "Delete", {:action => 'delete', :id => c.id},
-            :confirm => "Are you sure you want to delete this item?" %></b>
+        <b> <%= link_to 'Edit', {:action => "edit", :id => c.id} %></b>
+        <b> <%= link_to "Delete", {:action => 'delete', :id => c.id}, :confirm => "Are you sure you want to delete this item?" %></b>
     </li>
     <% end %>
 </ol>
 
+<ul id="uploads">
 
+    <li><b> <%= link_to 'Donate Book', {:action => "uploadfile"} %></b></li>
+
+</ul>
 <% end %>
 <p><%= link_to "Yeni Kitap Ekle", {:action => 'new' }%></p>
