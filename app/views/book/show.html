@@ -1,7 +1,12 @@
 <h1><%= @book.title %></h1>
-<p><strong>Price: </strong> $<%= @book.price %><br />
-<strong>Subject: </strong> <%=link_to @book.subject.try(:name), :action => "show_subjects", :id => @book.subject.try(:id) %><br />
+<p>
+<strong>Price: </strong>
+    $<%= @book.price %><br />
+<strong>Subject: </strong>
+    <%=link_to @book.subject.try(:name), :action => "show_subjects", :id => @book.subject.try(:id) %><br />
 </p>
+
 <p><%= @book.description %></p>
+
 <hr />
 <%= link_to 'Back', {:action => 'list'} %>
